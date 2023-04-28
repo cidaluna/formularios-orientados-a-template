@@ -33,6 +33,10 @@
   width: 100%;
 }
 
+.campo__espaco{
+  margin: 0px 20px 0px 3px; 
+}
+
 .formulario__campo {
   margin: .6em 3em .6em 0;
 

@@ -7,7 +7,7 @@
       <label class="campo__etiqueta" for="nome">Nome Completo</label>
       <input name="nome" id="nome" class="campo__escrita" ngModel required minlength="2" />
 
-      
+
     </div>
     <div class="formulario__dupla">
       <div class="formulario__campo">
@@ -18,6 +18,25 @@
         <label class="campo__etiqueta" for="telefone">Contato</label>
         <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita" />
       </div>
+
+      <div class="formulario__campo">
+        <label class="campo__etiqueta" for="nome">Sexo</label>
+        <div class="campo__escrita">
+          <div class="campo__espaco">
+            <input id="masc" type="radio" value="masc" name="sexo" />
+            <label for="masc">masc</label>
+          </div>
+          <div class="campo__espaco">
+            <input id="fem" type="radio" value="fem" name="sexo" />
+            <label for="fem">fem</label>
+          </div>
+          <div class="campo__espaco">
+            <input id="outro" type="radio" value="outro" name="sexo" />
+            <label for="outro">outro</label>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="email">E-mail</label>
