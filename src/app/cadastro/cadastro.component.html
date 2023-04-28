@@ -10,16 +10,29 @@
     <div class="formulario__dupla">
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="nascimento">Nascimento</label>
-        <input name="nascimento" id="nascimento" type="date" class="campo__escrita"/>
+        <input name="nascimento" id="nascimento" type="date" class="campo__escrita" />
       </div>
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="telefone">Contato</label>
-        <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita"/>
+        <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita" />
+      </div>
+
+      <div class="formulario__campo">
+        <label class="campo__etiqueta" for="sexo">Sexo</label>
+
+        <input class="campo__escrita" id="masc" type="radio" value="masc" name="sexo" formControlName="sexo">
+        <label for="masc">masc</label>
+
+        <input class="campo__escrita" id="fem" type="radio" value="fem" name="sexo" formControlName="sexo">
+        <label for="fem">fem</label>
+
+        <input class="campo__escrita" id="outro" type="radio" value="outro" name="sexo" formControlName="sexo">
+        <label for="outro">outro</label>
       </div>
     </div>
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="email">E-mail</label>
-      <input name="email" id="email" type="email" class="campo__escrita"/>
+      <input name="email" id="email" type="email" class="campo__escrita" />
     </div>
 
 
@@ -91,5 +104,5 @@
 
     </div>
     <button type="submit" class="formulario__botao">Enviar formulário</button>
-    </form>
+  </form>
 </main>
