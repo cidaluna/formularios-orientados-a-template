@@ -1,11 +1,13 @@
 <main class="principal">
   <h2 class="principal__titulo">Dados do cadastro</h2>
 
-  <form class="principal__formulario" id="formulario">
+  <form class="principal__formulario" id="formulario" #form="ngForm" (ngSubmit)="cadastrar(form)">
     <h3 class="principal__subtitulo">Dados pessoais</h3>
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="nome">Nome Completo</label>
-      <input name="nome" id="nome" class="campo__escrita">
+      <input name="nome" id="nome" class="campo__escrita" ngModel required minlength="2" />
+
+      
     </div>
     <div class="formulario__dupla">
       <div class="formulario__campo">
@@ -15,19 +17,6 @@
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="telefone">Contato</label>
         <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita" />
-      </div>
-
-      <div class="formulario__campo">
-        <label class="campo__etiqueta" for="sexo">Sexo</label>
-
-        <input class="campo__escrita" id="masc" type="radio" value="masc" name="sexo" formControlName="sexo">
-        <label for="masc">masc</label>
-
-        <input class="campo__escrita" id="fem" type="radio" value="fem" name="sexo" formControlName="sexo">
-        <label for="fem">fem</label>
-
-        <input class="campo__escrita" id="outro" type="radio" value="outro" name="sexo" formControlName="sexo">
-        <label for="outro">outro</label>
       </div>
     </div>
     <div class="formulario__campo">
@@ -103,6 +92,8 @@
       </div>
 
     </div>
+
+
     <button type="submit" class="formulario__botao">Enviar formulário</button>
   </form>
 </main>

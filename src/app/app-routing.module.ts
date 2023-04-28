@@ -1,7 +1,7 @@
+import { SucessoCadastroComponent } from './sucesso-cadastro/sucesso-cadastro.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { SucessoCadastroComponent } from './sucesso-cadastro/sucesso-cadastro.component';
 
 
 const routes: Routes = [
@@ -20,9 +20,8 @@ const routes: Routes = [
   },
 ];
 
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
