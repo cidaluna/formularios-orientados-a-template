@@ -99,7 +99,7 @@
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="numero">Numero</label>
         <input name="numero" id="numero" class="campo__escrita" ngModel required #numero="ngModel" />
-        <div *ngIf="(numero?.invalid) || numero?.dirty">
+        <div *ngIf="(numero?.invalid && numero?.touched) || numero?.dirty">
           <app-mensagem *ngIf="numero?.errors?.['required']" mensagem="O campo de número é obrigatório."></app-mensagem>
         </div>
       </div>
