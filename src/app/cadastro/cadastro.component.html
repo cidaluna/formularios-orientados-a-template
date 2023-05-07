@@ -61,7 +61,7 @@
 
     <div class="formulario__campo">
       <!-- EMAIL -->
-      <label class="campo__etiqueta" for="email">E-mail</label>
+      <label id="thebestemail" class="campo__etiqueta" for="email">Preencha com seu melhor E-mail</label>
       <input name="email" id="email" type="email" class="campo__escrita" ngModel required email />
       <div *ngIf="(f.controls['email']?.invalid && f.controls['email']?.touched) || f.controls['email']?.dirty">
         <span class="erro__texto" *ngIf="f.controls['email']?.errors?.
