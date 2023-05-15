@@ -47,4 +47,8 @@ export class CadastroComponent implements OnInit {
     })
   }
 
+  voltar(){
+    //link
+  }
+
 }

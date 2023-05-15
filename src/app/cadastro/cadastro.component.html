@@ -45,11 +45,11 @@
       <label class="campo__etiqueta" for="nome">Sexo</label>
       <div class="campo__escrita">
         <div class="campo__espaco">
-          <input id="masc" type="radio" value="masc" name="sexo" ngModel required #sexo="ngModel" />
+          <input id="masc" type="radio" value="masc" name="sexo" ngModel #sexo="ngModel" />
           <label for="masc">masc</label>
         </div>
         <div class="campo__espaco">
-          <input id="fem" type="radio" value="fem" name="sexo" ngModel required #sexo="ngModel" />
+          <input id="fem" type="radio" value="fem" name="sexo" ngModel checked required #sexo="ngModel" />
           <label for="fem">fem</label>
         </div>
         <div class="campo__espaco">
@@ -164,7 +164,7 @@
 
     </div>
 
-
-    <button type="submit" class="formulario__botao">Enviar formulário</button>
+    <button type="submit" (click)="voltar()">Voltar para a Página Home</button>
+    <button type="submit" class="formulario__botao" [disabled]="f.invalid">Enviar formulário</button>
   </form>
 </main>

@@ -1,7 +1,7 @@
 import { FormBuilder, FormsModule, NgForm } from '@angular/forms';
 
 import { CadastroComponent } from './cadastro.component';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { ConsultaCepService } from '../service/consulta-cep.service';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +28,7 @@ describe('CadastroComponent', () => {
 let component: CadastroComponent;
 let fixture: ComponentFixture<CadastroComponent>;
 let mockCepService: any;
+
 
 beforeEach(async () => {
     mockCepService = jasmine.createSpyObj(['get']);
@@ -62,6 +63,7 @@ it('should call cadastrar method and show invalid message', () =>{
   component.cadastrar(myForm);
   expect(component.cadastrar).toHaveBeenCalled();
 });
+
 /*
 it('should call cadastrar method and show valid message', () =>{
   var myForm: NgForm = <NgForm>{
@@ -72,7 +74,6 @@ it('should call cadastrar method and show valid message', () =>{
   expect(component.cadastrar).toHaveBeenCalled();
 });
 */
-
 
 
 it('should have a label with class campo__etiqueta for the nome field', () => {
@@ -97,5 +98,12 @@ it('should have a label with class campo__etiqueta for the email field', () => {
   expect(elem.nativeElement.innerText).toEqual('Preencha com seu melhor E-mail');
 });
 
+it('should call voltar method when clicked', fakeAsync(() => {
+  spyOn(component, 'voltar');
+  let btn = fixture.debugElement.nativeElement.querySelector('button');
+  btn.click();
+  tick();
+  expect(component.voltar).toHaveBeenCalled();
+}));
 
 });
